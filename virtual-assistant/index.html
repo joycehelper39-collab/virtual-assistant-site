@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Kayla's Virtual Assistant</title>
+</head>
+<body>
+    <main class="layout">
+        <header class="page-header">
+            <p class="eyebrow">Kayla's command center</p>
+            <h1>Virtual Assistant</h1>
+            <p class="lede">Plan your day, track lists, and clear tasks without jumping between apps.</p>
+        </header>
+
+        <section class="panel" aria-labelledby="events-title">
+            <div class="panel__header">
+                <div>
+                    <h2 id="events-title">Calendar events</h2>
+                    <p>Capture the essentials — date, time, place, notes, and a quick summary.</p>
+                </div>
+            </div>
+            <form id="event-form" class="form-grid">
+                <label>
+                    <span>Date</span>
+                    <input type="date" id="event-date">
+                </label>
+                <label>
+                    <span>Time</span>
+                    <input type="time" id="event-time">
+                </label>
+                <label>
+                    <span>Place</span>
+                    <input type="text" id="event-place" placeholder="e.g. Downtown studio">
+                </label>
+                <label class="form-grid__wide">
+                    <span>Notes</span>
+                    <textarea id="event-notes" rows="2" placeholder="Any context or prep?"></textarea>
+                </label>
+                <label class="form-grid__wide">
+                    <span>Summary *</span>
+                    <input type="text" id="event-summary" placeholder="Short title" required>
+                </label>
+                <button type="submit" id="add-event" class="btn btn--primary">Add event</button>
+            </form>
+            <div id="event-list" class="stack" aria-live="polite"></div>
+        </section>
+
+        <section class="panel" aria-labelledby="groceries-title">
+            <div class="panel__header">
+                <div>
+                    <h2 id="groceries-title">Grocery list</h2>
+                    <p>Quick adds for market runs.</p>
+                </div>
+            </div>
+            <div class="input-row">
+                <input type="text" id="grocery-input" placeholder="Add grocery item">
+                <button id="add-grocery" class="btn">Add item</button>
+            </div>
+            <ul id="grocery-list" class="list" aria-live="polite"></ul>
+        </section>
+
+        <section class="panel" aria-labelledby="tasks-title">
+            <div class="panel__header">
+                <div>
+                    <h2 id="tasks-title">Tasks</h2>
+                    <p>Log chores, reminders, and follow-ups.</p>
+                </div>
+            </div>
+            <div class="input-row">
+                <input type="text" id="task-input" placeholder="Add a task">
+                <button id="add-task" class="btn">Add task</button>
+            </div>
+            <ul id="task-list" class="list" aria-live="polite"></ul>
+        </section>
+    </main>
+
+    <script src="script.js?v=3"></script>
+</body>
+</html>
