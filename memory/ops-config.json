@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "memorySearch": {
+    "maxResults": 5,
+    "maxSnippetChars": 360,
+    "preferRecentDays": 3,
+    "tierOrder": ["hot", "warm", "cold"],
+    "notes": "Use tighter snippets to reduce token bloat while preserving high-signal recall."
+  },
+  "memoryFlush": {
+    "enabled": true,
+    "trigger": {
+      "eventsSinceLastFlush": 8,
+      "orMinutesSinceLastFlush": 180
+    },
+    "targetFilePattern": "memory/YYYY-MM-DD.md",
+    "maxBulletsPerFlush": 4,
+    "maxBulletChars": 160,
+    "dedupeWindowDays": 2,
+    "writeStyle": "concise-durable"
+  },
+  "compaction": {
+    "enabled": true,
+    "scheduleHint": "heartbeat",
+    "dailyCapLines": 80,
+    "rollover": {
+      "hotToWarmDays": 3,
+      "warmToColdDays": 14
+    },
+    "archiveBeforeRewrite": true,
+    "archivePath": "memory/archive/"
+  }
+}
