@@ -6,9 +6,5 @@
 - [ ] Memory maintenance (2-3 min)
   - [ ] Flush concise notes to `memory/YYYY-MM-DD.md`
   - [ ] Deduplicate repetitive lines from today’s note
-  - [ ] Review `memory/open-loops.md` and update next actions
   - [ ] Run hot/warm/cold rollover using `memory/ops-config.json`
-- [ ] Weekly (once/day check; run only on due day)
-  - [ ] Compact prior 7 days into `memory/weekly-summary.md`
-  - [ ] Promote durable facts to `MEMORY.md`
 - [ ] Verify security credentials

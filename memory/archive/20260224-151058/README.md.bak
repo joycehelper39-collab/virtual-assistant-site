@@ -8,7 +8,6 @@
 
 ## Operations config
 - `memory/ops-config.json` controls search limits, flush cadence, and compaction policy.
-- Retrieval priority should favor: `MEMORY.md` -> `memory/open-loops.md` -> recent daily notes.
 
 ## Safety rule
 Do not delete source daily files during organization. Move/copy only, and back up rewrites to `memory/archive/` first.

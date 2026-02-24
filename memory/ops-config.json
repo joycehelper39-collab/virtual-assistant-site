@@ -1,28 +1,39 @@
 {
-  "version": 1,
+  "version": 2,
   "memorySearch": {
-    "maxResults": 5,
-    "maxSnippetChars": 360,
+    "maxResults": 4,
+    "maxSnippetChars": 300,
     "preferRecentDays": 3,
-    "tierOrder": ["hot", "warm", "cold"],
-    "notes": "Use tighter snippets to reduce token bloat while preserving high-signal recall."
+    "tierOrder": [
+      "hot",
+      "warm",
+      "cold"
+    ],
+    "priorityFiles": [
+      "MEMORY.md",
+      "memory/open-loops.md",
+      "memory/YYYY-MM-DD.md"
+    ],
+    "notes": "Keep recall high-signal and low-token; only expand scope when confidence is low."
   },
   "memoryFlush": {
     "enabled": true,
     "trigger": {
-      "eventsSinceLastFlush": 8,
-      "orMinutesSinceLastFlush": 180
+      "eventsSinceLastFlush": 6,
+      "orMinutesSinceLastFlush": 120
     },
     "targetFilePattern": "memory/YYYY-MM-DD.md",
     "maxBulletsPerFlush": 4,
-    "maxBulletChars": 160,
+    "maxBulletChars": 150,
     "dedupeWindowDays": 2,
-    "writeStyle": "concise-durable"
+    "writeStyle": "concise-durable",
+    "requireActionableOrDurable": true
   },
   "compaction": {
     "enabled": true,
     "scheduleHint": "heartbeat",
-    "dailyCapLines": 80,
+    "dailyCapLines": 70,
+    "weeklySummaryFile": "memory/weekly-summary.md",
     "rollover": {
       "hotToWarmDays": 3,
       "warmToColdDays": 14

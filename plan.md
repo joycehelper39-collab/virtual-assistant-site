@@ -1,22 +1,13 @@
-# Memory Operations Plan
+# Memory Hardening Plan (Execution)
 
 ## Goal
-Stabilize and slim memory operations by organizing notes into hot/warm/cold tiers, setting explicit retrieval/flush limits, and adding lightweight heartbeat maintenance.
+Maximize practical memory reliability and retrieval quality in this workspace while semantic memory search is intermittently unavailable.
 
-## Status
-- [x] Inspect current memory layout and existing config.
-- [x] Back up edited files to `memory/archive/`.
-- [x] Create tiered memory folders (`hot/`, `warm/`, `cold/`) and organize copies without deleting originals.
-- [x] Add explicit memory operations config with tighter `memorySearch` and `memoryFlush/compaction` settings.
-- [x] Update `HEARTBEAT.md` with concise memory-maintenance checklist.
-- [x] Add durable daily note entry documenting this maintenance run.
-- [x] Prepare workspace commit.
-
-## Files involved
-- `MEMORY.md` (new)
-- `memory/` (new tier folders + archive + policy docs)
-- `memory/ops-config.json` (new)
-- `memory/README.md` (new)
-- `HEARTBEAT.md` (updated)
-- `memory/2026-02-24.md` (updated)
-- `plan.md` (this file)
+## Steps
+1. Back up memory control files before edits.
+2. Create curated long-term `MEMORY.md` with high-signal durable facts.
+3. Add `memory/open-loops.md` to track active projects and next actions.
+4. Add weekly compaction notes file and tighten `memory/ops-config.json` further.
+5. Update `HEARTBEAT.md` to include concise weekly maintenance checks.
+6. Append concise durable summary to today’s daily note.
+7. Commit all workspace changes.
