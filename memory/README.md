@@ -1,16 +1,13 @@
 # Memory Layout
 
-This workspace now uses a tiered memory layout to reduce retrieval cost and keep high-signal notes easy to find.
-
 ## Tiers
-- `memory/hot/` — current day + very recent context (active work)
-- `memory/warm/` — recent but less-active context
-- `memory/cold/` — older reference context
+- `memory/hot/` — current/high-velocity notes (recent few days)
+- `memory/warm/` — recent but less active context
+- `memory/cold/` — older durable references
 - `memory/archive/` — backups before risky edits/compaction
 
-## Compatibility
-Primary daily notes remain in `memory/YYYY-MM-DD.md` for compatibility with existing workflows.
-Tier folders currently store non-destructive copies for retrieval guidance and compaction planning.
+## Operations config
+- `memory/ops-config.json` controls search limits, flush cadence, and compaction policy.
 
-## Operational Policy
-See `memory/ops-config.json` for current memorySearch/memoryFlush/compaction limits.
+## Safety rule
+Do not delete source daily files during organization. Move/copy only, and back up rewrites to `memory/archive/` first.

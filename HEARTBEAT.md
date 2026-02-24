@@ -2,9 +2,9 @@
 
 ## Checklist
 - [ ] Review pending/failed jobs
-- [ ] Update daily notes with concise durable bullets
+- [ ] Update daily note with max 4 durable bullets
 - [ ] Memory maintenance (2-3 min)
-  - [ ] Flush key events to `memory/YYYY-MM-DD.md` (max 4 bullets)
+  - [ ] Flush concise notes to `memory/YYYY-MM-DD.md`
   - [ ] Deduplicate repetitive lines from today’s note
-  - [ ] If needed, copy stale notes across tiers: hot → warm → cold
+  - [ ] Run hot/warm/cold rollover using `memory/ops-config.json`
 - [ ] Verify security credentials
